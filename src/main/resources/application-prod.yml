@@ -1,0 +1,43 @@
+# 线上配置文件
+# @author 程序员小白条
+# @from <a href="https://luoye6.github.io/"> 个人博客
+server:
+  port: 8887
+spring:
+  # 数据库配置
+  # todo 需替换配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tourism?characterEncoding=utf8&useSSL=false
+    username: root
+    password: hsp
+  # Redis 配置
+  # todo 需替换配置
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    timeout: 5000
+    password: 123456
+  # Elasticsearch 配置
+  # todo 需替换配置
+  elasticsearch:
+    uris: http://localhost:9200
+    username: root
+    password: 123456
+mybatis-plus:
+  configuration:
+    # 生产环境关闭日志
+    log-impl: ''
+# 接口文档配置
+knife4j:
+  basic:
+    enable: true
+    username: root
+    password: 123456
+#jwt config
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: mall-jwt-test #jwt加解密使用的密钥
+  expiration: 36000000 #JWT的超时时间
+  tokenHead: Bearer #JWT负载中拿到的开头

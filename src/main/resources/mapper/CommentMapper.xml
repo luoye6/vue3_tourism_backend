@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaobaitiao.springbootinit.mapper.CommentMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaobaitiao.springbootinit.model.entity.Comment">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="postId" column="postId" jdbcType="BIGINT"/>
+            <result property="userId" column="userId" jdbcType="BIGINT"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="parentId" column="parentId" jdbcType="BIGINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="ancestorId" column="ancestorId" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,questionId,userId,
+        content,parentId,createTime,
+        updateTime,isDelete,ancestorId
+    </sql>
+</mapper>

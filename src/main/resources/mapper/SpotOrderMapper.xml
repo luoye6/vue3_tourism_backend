@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaobaitiao.springbootinit.mapper.SpotOrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaobaitiao.springbootinit.model.entity.SpotOrder">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <id property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="userId" column="userId" jdbcType="BIGINT"/>
+            <result property="spotFeeId" column="spotFeeId" jdbcType="BIGINT"/>
+            <result property="userName" column="userName" jdbcType="VARCHAR"/>
+            <result property="userPhone" column="userPhone" jdbcType="VARCHAR"/>
+            <result property="paymentAmount" column="paymentAmount" jdbcType="DECIMAL"/>
+            <result property="payStatus" column="payStatus" jdbcType="TINYINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,isDelete,userId,
+        spotFeeId,userName,userPhone,
+        paymentAmount,payStatus,createTime,
+        updateTime
+    </sql>
+</mapper>
